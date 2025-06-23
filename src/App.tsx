@@ -1,12 +1,7 @@
 import React from "react";
-import LoginPage from "./pages/LoginPage";
 
-function App() {
-  return (
-    <div className="App">
-      <LoginPage />
-    </div>
-  );
-}
+const App = () => {
+  return <div className="bg-red-500">app</div>;
+};
 
 export default App;
