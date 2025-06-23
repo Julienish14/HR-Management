@@ -1,9 +1,4 @@
 {
-  {
-  "postcss": {
-    "config": "postcss.config.ts"
-  }
-},
   "name": "hr-management",
   "private": true,
   "version": "0.0.0",
