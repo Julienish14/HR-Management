@@ -38,26 +38,25 @@ const SignupForm: React.FC = () => {
     <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
       <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
-            <Input
-              id="firstName"
-              name="firstName"
-              type="text"
-              label="First Name"
-              required
-              value={formData.firstName}
-              onChange={handleChange}
-            />
-            <Input
-              id="lastName"
-              name="lastName"
-              type="text"
-              label="Last Name"
-              required
-              value={formData.lastName}
-              onChange={handleChange}
-            />
-          </div>
+          <Input
+            id="firstName"
+            name="firstName"
+            type="text"
+            label="First Name"
+            required
+            value={formData.firstName}
+            onChange={handleChange}
+          />
+
+          <Input
+            id="lastName"
+            name="lastName"
+            type="text"
+            label="Last Name"
+            required
+            value={formData.lastName}
+            onChange={handleChange}
+          />
 
           <Input
             id="email"
