@@ -1,10 +1,23 @@
 import React from "react";
 import AuthLayout from "../components/Auth/AuthLayout";
 import LoginForm from "../components/Auth/LoginForm";
+import { Link } from "react-router-dom";
+
 
 const Login: React.FC = () => {
   return (
     <AuthLayout
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-900">HR Management</h1>
+          <div className="mt-4 flex justify-center space-x-4">
+            <Link to="/login" className="font-medium text-gray-500">
+              Login
+            </Link>
+            <Link to="/signup" className="font-medium text-primary underline">
+              Sign Up
+            </Link>
+          </div>
+        </div>
       title="Login | Sign Up"
       version="20.2.23"
       copyright="2023-24 Next and Services"
