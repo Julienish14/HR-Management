@@ -127,7 +127,7 @@ const SignUpPage = () => {
           </div>
         </form>
 
-        <div className="relative">
+        {/* <div className="relative">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-300"></div>
           </div>
@@ -136,7 +136,7 @@ const SignUpPage = () => {
               Or continue with
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="mt-2">
           <button
