@@ -35,39 +35,39 @@ const SignUpPage = () => {
         </div>
 
         <form className="mt-8 space-y-6 bg-white p-8 rounded-lg shadow-md">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label
-                htmlFor="first-name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                First Name
-              </label>
-              <input
-                id="first-name"
-                name="first-name"
-                type="text"
-                required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-              />
-            </div>
+          {/* <div className="grid grid-cols-2 gap-4"> */}
+          {/* <div> */}
+          <label
+            htmlFor="first-name"
+            className="block text-sm font-medium text-gray-700"
+          >
+            First Name
+          </label>
+          <input
+            id="first-name"
+            name="first-name"
+            type="text"
+            required
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+          />
+          {/* </div> */}
 
-            <div>
-              <label
-                htmlFor="last-name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Last Name
-              </label>
-              <input
-                id="last-name"
-                name="last-name"
-                type="text"
-                required
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-              />
-            </div>
+          <div>
+            <label
+              htmlFor="last-name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Last Name
+            </label>
+            <input
+              id="last-name"
+              name="last-name"
+              type="text"
+              required
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+            />
           </div>
+          {/* </div> */}
 
           <div>
             <label
@@ -131,11 +131,11 @@ const SignUpPage = () => {
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-300"></div>
           </div>
-          <div className="relative flex justify-center text-sm">
+          {/* <div className="relative flex justify-center text-sm">
             <span className="px-2 bg-white text-gray-500">
               Or continue with
             </span>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-2">
