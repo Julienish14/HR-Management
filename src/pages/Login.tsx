@@ -66,7 +66,7 @@ const SignUpPage = () => {
               />
             </div> */}
 
-            <div>
+            {/* <div>
               <label
                 htmlFor="last-name"
                 className="block text-sm font-medium text-gray-700"
@@ -80,7 +80,7 @@ const SignUpPage = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               />
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -115,7 +115,7 @@ const SignUpPage = () => {
             />
           </div>
 
-          <div>
+          {/* <div>
             <label
               htmlFor="confirm-password"
               className="block text-sm font-medium text-gray-700"
@@ -129,7 +129,7 @@ const SignUpPage = () => {
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
             />
-          </div>
+          </div> */}
 
           <div>
             <button
