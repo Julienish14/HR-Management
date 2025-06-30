@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "google";
+  variant?: "primary" | "secondary" | "google" | "co";
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
       "border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-gray-500",
     google:
       "border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-gray-500",
+    co: "border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-gray-800",
   };
 
   return (

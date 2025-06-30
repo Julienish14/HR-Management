@@ -50,7 +50,7 @@ const SignUpPage = () => {
 
         <form className="mt-8 space-y-6 bg-white p-8 rounded-lg shadow-md">
           <div className="grid grid-cols-2 gap-4">
-            <div>
+            {/* <div>
               <label
                 htmlFor="first-name"
                 className="block text-sm font-medium text-gray-700"
@@ -64,9 +64,9 @@ const SignUpPage = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               />
-            </div>
+            </div> */}
 
-            <div>
+            {/* <div>
               <label
                 htmlFor="last-name"
                 className="block text-sm font-medium text-gray-700"
@@ -80,7 +80,7 @@ const SignUpPage = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               />
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -115,7 +115,7 @@ const SignUpPage = () => {
             />
           </div>
 
-          <div>
+          {/* <div>
             <label
               htmlFor="confirm-password"
               className="block text-sm font-medium text-gray-700"
@@ -129,7 +129,7 @@ const SignUpPage = () => {
               required
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
             />
-          </div>
+          </div> */}
 
           <div>
             <button
@@ -161,11 +161,11 @@ const SignUpPage = () => {
           </button>
         </div>
 
-        <div className="mt-8 text-center text-sm text-gray-500">
+        {/* <div className="mt-8 text-center text-sm text-gray-500">
           <p>Rebecca Notes</p>
           <p>version: 20.2.0.1</p>
           <p className="mt-2">Copyright © 2023-24 HRM and services</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
