@@ -1,21 +1,3 @@
-// import React from "react";
-// import AuthLayout from "../components/Auth/AuthLayout";
-// import SignupForm from "../components/Auth/SignupForm";
-
-// const Signup: React.FC = () => {
-//   return (
-//     <AuthLayout
-//       title="Login | Sign Up"
-//       version="20.2.0.1"
-//     //   copyright="2023-24 HRM and services"
-//     >
-//       <SignupForm />
-//     </AuthLayout>
-//   );
-// };
-
-// export default Signup;
-
 import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
@@ -35,39 +17,39 @@ const SignUpPage = () => {
         </div>
 
         <form className="mt-8 space-y-6 bg-white p-8 rounded-lg shadow-md">
-          {/* <div className="grid grid-cols-2 gap-4"> */}
-          {/* <div> */}
-          <label
-            htmlFor="first-name"
-            className="block text-sm font-medium text-gray-700"
-          >
-            First Name
-          </label>
-          <input
-            id="first-name"
-            name="first-name"
-            type="text"
-            required
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-          />
-          {/* </div> */}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label
+                htmlFor="first-name"
+                className="block text-sm font-medium text-gray-700"
+              >
+                First Name
+              </label>
+              <input
+                id="first-name"
+                name="first-name"
+                type="text"
+                required
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+              />
+            </div>
 
-          <div>
-            <label
-              htmlFor="last-name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Last Name
-            </label>
-            <input
-              id="last-name"
-              name="last-name"
-              type="text"
-              required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
-            />
+            <div>
+              <label
+                htmlFor="last-name"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Last Name
+              </label>
+              <input
+                id="last-name"
+                name="last-name"
+                type="text"
+                required
+                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+              />
+            </div>
           </div>
-          {/* </div> */}
 
           <div>
             <label
@@ -127,7 +109,7 @@ const SignUpPage = () => {
           </div>
         </form>
 
-        {/* <div className="relative">
+        <div className="relative">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-300"></div>
           </div>
@@ -136,7 +118,7 @@ const SignUpPage = () => {
               Or continue with
             </span>
           </div>
-        </div> */}
+        </div>
 
         <div className="mt-2">
           <button
@@ -147,11 +129,11 @@ const SignUpPage = () => {
           </button>
         </div>
 
-        {/* <div className="mt-8 text-center text-sm text-gray-500">
+        <div className="mt-8 text-center text-sm text-gray-500">
           <p>Rebecca Notes</p>
           <p>version: 20.2.0.1</p>
           <p className="mt-2">Copyright © 2023-24 HRM and services</p>
-        </div> */}
+        </div>
       </div>
     </div>
   );
