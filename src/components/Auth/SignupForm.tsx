@@ -8,13 +8,7 @@ interface SignUpFormData {
   password: string;
   confirmPassword: string;
 }
-// interface SignUpFormData {
-//   firstName: string;
-//   lastName: string;
-//   email: string;
-//   password: string;
-//   confirmPassword: string;
-// }
+
 export const SignUpForm = () => {
   const {
     register,
