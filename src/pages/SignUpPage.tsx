@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const SignUpPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-200 p-4">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900">HR Management</h1>
@@ -116,7 +116,7 @@ const SignUpPage = () => {
         </form>
 
         <div className="mt-8 text-center text-sm text-gray-500">
-          <p>Rebecca Notes</p>
+          <p>Reassss</p>
           <p>version: 20.2.0.1</p>
           <p className="mt-2">Copyright © 2023-24 HRM and services</p>
         </div>
