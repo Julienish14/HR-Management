@@ -65,7 +65,7 @@ const LoginPage = () => {
                   Remember
                 </label>
               </div>
-              {/* 
+
               <div className="text-sm">
                 <a
                   href="#"
@@ -73,7 +73,7 @@ const LoginPage = () => {
                 >
                   Forgot Password?
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
 
