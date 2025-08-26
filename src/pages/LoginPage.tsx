@@ -38,7 +38,7 @@ const LoginPage = () => {
                 htmlFor="fullnames"
                 className="block text-sm font-medium text-gray-700"
               >
-                Username
+                fullnames
               </label>
               <input
                 id="fullnames"
