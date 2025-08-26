@@ -33,7 +33,7 @@ const LoginPage = () => {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               />
             </div>
-            <div>
+            {/* <div>
               <label
                 htmlFor="fullnames"
                 className="block text-sm font-medium text-gray-700"
@@ -47,7 +47,7 @@ const LoginPage = () => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
               />
-            </div>
+            </div> */}
 
             <div>
               <label
