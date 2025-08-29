@@ -98,7 +98,7 @@ const LoginPage = () => {
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>Release Notes</p>
           <p>version: 20.2.23</p>
-          <p className="mt-2">Copyright © 2023-24 Next and Services</p>
+          <p className="mt-2">Copyright © 2025 Next and Services</p>
         </div>
       </div>
     </div>
