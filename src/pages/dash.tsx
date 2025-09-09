@@ -37,12 +37,12 @@ export const Button: React.FC<ButtonProps> = ({
     className
   );
 
-  return (
-    <button className={classes} {...props}>
-      {children}
-    </button>
-  );
-};
+//   return (
+//     <button className={classes} {...props}>
+//       {children}
+//     </button>
+//   );
+// };
 
 ///////
 
