@@ -75,7 +75,7 @@ export const Input: React.FC<InputProps> = ({
     //     )}
     //     {...props}
     //   />
-      {error && <p className="text-sm text-red-600">{error}</p>}
-    </div>
-  );
-};
+//       {error && <p className="text-sm text-red-600">{error}</p>}
+//     </div>
+//   );
+// };
