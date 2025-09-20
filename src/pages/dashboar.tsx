@@ -36,3 +36,11 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+import React from "react";
+import { twMerge } from "tailwind-merge";
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
+}
