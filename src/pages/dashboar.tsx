@@ -76,7 +76,7 @@ import { Link } from "react-router-dom";
 const LoginPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-blue-700 p-4">
-      {/* <div className="w-full max-w-md space-y-8">
+      <div className="w-full max-w-md space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900">HR Management</h1>
           <div className="mt-4 flex justify-center space-x-4">
@@ -87,7 +87,7 @@ const LoginPage = () => {
               Sign Up
             </Link>
           </div>
-        </div> */}
+        </div>
 
         <form className="mt-8 space-y-6 bg-white p-8 rounded-lg shadow-md">
           <div className="space-y-4">
