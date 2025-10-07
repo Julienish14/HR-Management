@@ -6,15 +6,15 @@
 //   size?: "sm" | "md" | "lg";
 // }
 
-// export const Button: React.FC<ButtonProps> = ({
-//   children,
-//   variant = "primary",
-//   size = "md",
-//   className,
-//   ...props
-// }) => {
-//   const baseClasses =
-//     "rounded-lg font-medium transition-colors focus:outline-none focus:ring-2";
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = "primary",
+  size = "md",
+  className,
+  ...props
+}) => {
+  const baseClasses =
+    "rounded-lg font-medium transition-colors focus:outline-none focus:ring-2";
 
   const variants = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500",
