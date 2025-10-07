@@ -30,12 +30,12 @@
 //     lg: "px-6 py-3 text-lg",
 //   };
 
-//   return (
-//     <button className={classes} {...props}>
-//       {children}
-//     </button>
-//   );
-// };
+  return (
+    <button className={classes} {...props}>
+      {children}
+    </button>
+  );
+};
 
 import React from "react";
 import { twMerge } from "tailwind-merge";
