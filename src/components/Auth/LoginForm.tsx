@@ -1,5 +1,5 @@
-// import { useForm } from "react-hook-form";
-// import { LockClosedIcon, MailIcon } from "@heroicons/react/outline";
+import { useForm } from "react-hook-form";
+import { LockClosedIcon, MailIcon } from "@heroicons/react/outline";
 
 interface LoginFormData {
   username: string;
