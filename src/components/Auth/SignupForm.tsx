@@ -77,18 +77,7 @@ export const SignUpForm = () => {
           )}
         </div>
       </div>
-export const SignUpForm = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<SignUpFormData>();
 
-  const onSubmit = (data: SignUpFormData) => {
-    console.log(data);
-    // Handle signup logic here
-  };
       <div>
         <label
           htmlFor="email"
