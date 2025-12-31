@@ -43,3 +43,21 @@ export const signupSchema = z
     message: "Passwords don't match",
     path: ["confirmPassword"],
   });
+
+export type LoginFormData = z.infer<typeof loginSchema>;
+export type SignupFormData = z.infer<typeof signupSchema>;
+
+// Password strength checker
+export const checkPasswordStrength = (
+  password: string
+): {
+  //   score: number;
+  //   strength: "Weak" | "Fair" | "Good" | "Strong";
+  //   feedback: string[];
+} => {
+  const feedback: string[] = [];
+  let score = 0;
+
+  if (password.length >= 8) score += 1;
+  else feedback.push("At least 8 characters");
+};
