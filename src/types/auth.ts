@@ -25,3 +25,20 @@ export interface SignupCredentials {
   confirmPassword: string;
   acceptTerms: boolean;
 }
+export interface AuthState {
+  user: User | null;
+  token: string | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  error: string | null;
+}
+
+export interface AuthContextType extends AuthState {
+  login: (credentials: LoginCredentials) => Promise<void>;
+  signup: (credentials: SignupCredentials) => Promise<void>;
+  logout: () => void;
+  resetPassword: (email: string) => Promise<void>;
+  clearError: () => void;
+}
+
+export type SocialProvider = "google" | "github" | "facebook";
