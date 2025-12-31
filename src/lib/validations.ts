@@ -51,13 +51,19 @@ export type SignupFormData = z.infer<typeof signupSchema>;
 export const checkPasswordStrength = (
   password: string
 ): {
-  //   score: number;
-  //   strength: "Weak" | "Fair" | "Good" | "Strong";
-  //   feedback: string[];
+  score: number;
+  strength: "Weak" | "Fair" | "Good" | "Strong";
+  feedback: string[];
 } => {
   const feedback: string[] = [];
   let score = 0;
 
   if (password.length >= 8) score += 1;
   else feedback.push("At least 8 characters");
+
+  if (/[A-Z]/.test(password)) score += 1;
+  else feedback.push("One uppercase letter");
+
+  if (/[a-z]/.test(password)) score += 1;
+  else feedback.push("One lowercase letter");
 };
