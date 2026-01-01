@@ -3,7 +3,7 @@
 // import SignUpPage from "./pages/SignUpPage";
 
 import { Outlet } from "react-router";
-import {react-toastify/dist/ReactToastify.css"};
+// import {react-toastify/dist/ReactToastify.css"};
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 
