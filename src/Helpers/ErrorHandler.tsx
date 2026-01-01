@@ -12,6 +12,13 @@ export const handleError = (error: any) => {
       for (let e in err?.data.errors) {
         toast.warning(err?.data.errors[e][0]);
       }
+    } else if (err?.data) {
+      toast.warning(err.data);
+    } else if (err?.status == 401) {
+      toast.warning("Unauthorized access. Please login.");
+      window.history.pushState({}, "LoginPage", "/login");
+    } else if (err) {
+      toast.warning(err?.data);
     }
   }
 };
