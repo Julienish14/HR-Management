@@ -17,6 +17,8 @@ export const handleError = (error: any) => {
     } else if (err?.status == 401) {
       toast.warning("Unauthorized access. Please login.");
       window.history.pushState({}, "LoginPage", "/login");
+    } else if (err?.status == 403) {
+      toast.warning("Forbidden access.");
     } else if (err) {
       toast.warning(err?.data);
     }
