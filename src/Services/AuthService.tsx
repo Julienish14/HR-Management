@@ -1,4 +1,5 @@
 import axios from "axios";
+import { handleError } from "../Helpers/ErrorHandler";
 
 const api = "http://localhost:5167/api";
 
@@ -10,6 +11,6 @@ export const loginAPI = async (username: string, password: string) => {
     });
     return data;
   } catch (error) {
-    handleError();
+    handleError(error);
   }
 };
