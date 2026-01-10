@@ -78,4 +78,9 @@ export const UserProvider = ({ children }: Props) => {
       })
       .catch((e) => toast.warning("Server error occurred"));
   };
+
+  const isLoggedIn = () => {
+    // return token !== null;
+    return !!user;
+  };
 };
