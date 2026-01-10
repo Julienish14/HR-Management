@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useContext } from "react";
 import { UserProfile } from "../Models/User";
 import { useNavigate } from "react-router-dom";
 import { registerAPI, loginAPI } from "../Services/AuthService";
@@ -108,3 +108,5 @@ export const UserProvider = ({ children }: Props) => {
     </UserContext.Provider>
   );
 };
+
+export const useAuth = () => useContext(UserContext);
