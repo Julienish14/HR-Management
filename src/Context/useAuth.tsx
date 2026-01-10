@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { UserProfile } from "../Models/User";
 import { useNavigate } from "react-router-dom";
-import { registerAPI } from "../Services/AuthService";
+import { registerAPI, loginAPI } from "../Services/AuthService";
 import { toast } from "react-toastify";
 
 type UserContextType = {
@@ -50,7 +50,30 @@ export const UserProvider = ({ children }: Props) => {
           setToken(res?.data.token!);
           setUser(userObj!);
           toast.success("Registration successful!");
-          navigate("/dashboard");
+          navigate("/search");
+        }
+      })
+      .catch((e) => toast.warning("Server error occurred"));
+  };
+
+  const loginUser = async (
+    email: string,
+    // username: string,
+    password: string
+  ) => {
+    await loginAPI(email, password)
+      .then((res) => {
+        if (res) {
+          localStorage.setItem("token", res?.data.token);
+          const userObj = {
+            userName: res?.data.username,
+            email: res?.data.email,
+          };
+          localStorage.setItem("user", JSON.stringify(userObj));
+          setToken(res?.data.token!);
+          setUser(userObj!);
+          toast.success("Registration successful!");
+          navigate("/search");
         }
       })
       .catch((e) => toast.warning("Server error occurred"));
