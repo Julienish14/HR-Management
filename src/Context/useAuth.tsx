@@ -3,6 +3,7 @@ import { UserProfile } from "../Models/User";
 import { useNavigate } from "react-router-dom";
 import { registerAPI, loginAPI } from "../Services/AuthService";
 import { toast } from "react-toastify";
+import React from "react";
 
 type UserContextType = {
   user: UserProfile | null;
@@ -109,4 +110,5 @@ export const UserProvider = ({ children }: Props) => {
   );
 };
 
-export const useAuth = () => useContext(UserContext);
+// export const userAuth = () => useContext(UserContext);
+export const userAuth = () => React.useContext(UserContext);
