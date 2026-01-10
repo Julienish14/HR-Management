@@ -33,7 +33,7 @@ export const UserProvider = ({ children }: Props) => {
     setIsReady(true);
   }, []);
 
-  const register = async (
+  const registerUser = async (
     email: string,
     username: string,
     password: string
@@ -91,4 +91,20 @@ export const UserProvider = ({ children }: Props) => {
     setToken(null);
     navigate("/login");
   };
+
+  return (
+    <UserContext.Provider
+      value={{
+        user,
+        token,
+        registerUser: registerUser,
+        loginUser,
+        logoutUser,
+        isLoggedIn,
+      }}
+    >
+      {/* {isReady && children} */}
+      {isReady ? children : null}
+    </UserContext.Provider>
+  );
 };
