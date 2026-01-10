@@ -85,10 +85,10 @@ export const UserProvider = ({ children }: Props) => {
   };
 
   const logoutUser = () => {
-    setToken(null);
-    setUser(null);
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    setUser(null);
+    setToken(null);
     navigate("/login");
   };
 };
