@@ -83,4 +83,12 @@ export const UserProvider = ({ children }: Props) => {
     // return token !== null;
     return !!user;
   };
+
+  const logoutUser = () => {
+    setToken(null);
+    setUser(null);
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
 };
