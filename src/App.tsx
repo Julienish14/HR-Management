@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import { UserProvider } from "./Context/useAuth";
+import AppRoutes from "./Routes/Routes";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Outlet />
         <ToastContainer />
       </UserProvider>
+      <AppRoutes />
     </>
     // <Router>
     //   <Routes>
