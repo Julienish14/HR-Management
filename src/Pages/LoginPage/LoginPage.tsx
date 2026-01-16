@@ -33,12 +33,11 @@ const LoginPage = (props: Props) => {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl dark:bg-gray-800 dark:border dark:border-gray-700 overflow-hidden">
           <div className="p-6 md:p-8">
-            {/* Logo/Header area - optional but good for branding */}
-            <div className="flex justify-center mb-6">
+            {/* <div className="flex justify-center mb-6">
               <div className="w-12 h-12 rounded-full bg-lightGreen flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Logo</span>
               </div>
-            </div>
+            </div> */}
 
             <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-2">
               Sign in to your account
