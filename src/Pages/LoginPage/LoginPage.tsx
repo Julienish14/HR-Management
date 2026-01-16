@@ -36,7 +36,7 @@ const LoginPage = (props: Props) => {
             {/* Logo/Header area - optional but good for branding */}
             <div className="flex justify-center mb-6">
               <div className="w-12 h-12 rounded-full bg-lightGreen flex items-center justify-center">
-                <span className="text-white font-bold text-xl">L</span>
+                <span className="text-white font-bold text-xl">Logo</span>
               </div>
             </div>
 
