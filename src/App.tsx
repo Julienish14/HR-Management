@@ -34,7 +34,7 @@
 import React from "react";
 import AppRoutes from "./Routes/Routes";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="min-h-screen bg-red-50">
       <AppRoutes />
@@ -43,3 +43,26 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+// import React from "react";
+// import { Outlet } from "react-router";
+// import "react-toastify/dist/ReactToastify.css";
+// import "./App.css";
+// import { ToastContainer } from "react-toastify";
+// import { UserProvider } from "./Context/useAuth";
+// import AppRoutes from "./Routes/Routes";
+
+// const App: React.FC = () => {
+//   return (
+//     <div className="min-h-screen bg-red-50">
+//       <AppRoutes />
+//       <UserProvider>
+//         {/* <Navbar /> */}
+//         <Outlet />
+//         <ToastContainer />
+//       </UserProvider>
+//     </div>
+//   );
+// };
+
+// export default App;
