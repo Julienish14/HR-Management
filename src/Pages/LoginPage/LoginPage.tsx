@@ -79,7 +79,7 @@ const LoginPage = (props: Props) => {
                   </label>
                   <a
                     href="#"
-                    className="text-sm text-lightGreen hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 transition-colors"
+                    className="text-sm text-white hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 transition-colors"
                   >
                     Forgot password?
                   </a>
