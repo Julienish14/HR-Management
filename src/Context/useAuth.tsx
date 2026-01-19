@@ -10,7 +10,7 @@ type UserContextType = {
   user: UserProfile | null;
   token: string | null;
   registerUser: (email: string, username: string, password: string) => void;
-  loginUser: (username: string, password: string) => void;
+  loginUser: (email: string, password: string) => void;
   logoutUser: () => void;
   isLoggedIn: () => boolean;
 };
@@ -69,13 +69,13 @@ export const UserProvider = ({ children }: Props) => {
         if (res) {
           localStorage.setItem("token", res?.data.token);
           const userObj = {
-            userName: res?.data.username,
+            // userName: res?.data.username,
             email: res?.data.email,
           };
           localStorage.setItem("user", JSON.stringify(userObj));
           setToken(res?.data.token!);
-          setUser(userObj!);
-          toast.success("Registration successful!");
+          // setUser(userObj!);
+          toast.success("Login successful!");
           navigate("/search");
         }
       })
