@@ -61,16 +61,25 @@ const LoginPage = (props: Props) => {
                 </label>
                 <input
                   type="text"
-                  id="username"
+                  // id="username"
+                  id="email"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
-                  placeholder="Enter your username"
-                  {...register("username")}
+                  placeholder="Enter your email"
+                  {...register("email")}
                 />
-                {errors.username && (
+
+                {errors.email ? (
                   <p className="mt-2 text-sm text-red-600 dark:text-red-400">
-                    {errors.username.message}
+                    {errors.email.message}
                   </p>
+                ) : (
+                  ""
                 )}
+                {/* {errors.email && (
+                  <p className="mt-2 text-sm text-red-600 dark:text-red-400">
+                    {errors.email.message}
+                  </p>
+                )} */}
               </div>
 
               <div>
@@ -91,7 +100,7 @@ const LoginPage = (props: Props) => {
                 <input
                   type="password"
                   id="password"
-                  placeholder="••••••••"
+                  placeholder="Enter your password"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
                   {...register("password")}
                 />
