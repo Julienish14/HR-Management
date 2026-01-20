@@ -19,12 +19,14 @@ export const loginAPI = async (username: string, password: string) => {
 };
 
 export const registerAPI = async (
+  fullname: string,
   email: string,
   username: string,
   password: string
 ) => {
   try {
     const data = await axios.post<UserProfileToken>(api + "register", {
+      fullname: fullname,
       email: email,
       username: username,
       password: password,
