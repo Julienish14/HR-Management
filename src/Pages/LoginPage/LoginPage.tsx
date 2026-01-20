@@ -7,12 +7,16 @@ import { useForm } from "react-hook-form";
 type Props = {};
 
 type LoginFormsInputs = {
-  username: string;
+  email: string;
+  // username: string;
   password: string;
 };
 
 const validation = Yup.object().shape({
-  username: Yup.string().required("Username is required"),
+  email: Yup.string()
+    .required("Email is required")
+    .email("Invalid email format"),
+  // username: Yup.string().required("Username is required"),
   password: Yup.string().required("Password is required"),
 });
 
@@ -25,7 +29,7 @@ const LoginPage = (props: Props) => {
   } = useForm<LoginFormsInputs>({ resolver: yupResolver(validation) });
 
   const handleLogin = (form: LoginFormsInputs) => {
-    loginUser(form.username, form.password);
+    loginUser(form.email, form.password);
   };
 
   return (
@@ -53,20 +57,29 @@ const LoginPage = (props: Props) => {
                   htmlFor="username"
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
-                  Username
+                  Email
                 </label>
                 <input
                   type="text"
-                  id="username"
+                  // id="username"
+                  id="email"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
-                  placeholder="Enter your username"
-                  {...register("username")}
+                  placeholder="Enter your email"
+                  {...register("email")}
                 />
-                {errors.username && (
+
+                {errors.email ? (
                   <p className="mt-2 text-sm text-red-600 dark:text-red-400">
-                    {errors.username.message}
+                    {errors.email.message}
                   </p>
+                ) : (
+                  ""
                 )}
+                {/* {errors.email && (
+                  <p className="mt-2 text-sm text-red-600 dark:text-red-400">
+                    {errors.email.message}
+                  </p>
+                )} */}
               </div>
 
               <div>
@@ -79,7 +92,7 @@ const LoginPage = (props: Props) => {
                   </label>
                   <a
                     href="#"
-                    className="text-sm text-lightGreen hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 transition-colors"
+                    className="text-sm text-white hover:text-green-600 dark:text-green-400 dark:hover:text-green-300 transition-colors"
                   >
                     Forgot password?
                   </a>
@@ -87,7 +100,7 @@ const LoginPage = (props: Props) => {
                 <input
                   type="password"
                   id="password"
-                  placeholder="••••••••"
+                  placeholder="Enter your password"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
                   {...register("password")}
                 />

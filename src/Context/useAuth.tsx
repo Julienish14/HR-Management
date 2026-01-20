@@ -9,8 +9,13 @@ import axios from "axios";
 type UserContextType = {
   user: UserProfile | null;
   token: string | null;
-  registerUser: (email: string, username: string, password: string) => void;
-  loginUser: (username: string, password: string) => void;
+  registerUser: (
+    fullname: string,
+    email: string,
+    username: string,
+    password: string
+  ) => void;
+  loginUser: (email: string, password: string) => void;
   logoutUser: () => void;
   isLoggedIn: () => boolean;
 };
@@ -37,11 +42,12 @@ export const UserProvider = ({ children }: Props) => {
   }, []);
 
   const registerUser = async (
+    fullname: string,
     email: string,
     username: string,
     password: string
   ) => {
-    await registerAPI(email, username, password)
+    await registerAPI(fullname, email, username, password)
       .then((res) => {
         if (res) {
           localStorage.setItem("token", res?.data.token);
@@ -69,13 +75,13 @@ export const UserProvider = ({ children }: Props) => {
         if (res) {
           localStorage.setItem("token", res?.data.token);
           const userObj = {
-            userName: res?.data.username,
+            // userName: res?.data.username,
             email: res?.data.email,
           };
           localStorage.setItem("user", JSON.stringify(userObj));
           setToken(res?.data.token!);
-          setUser(userObj!);
-          toast.success("Registration successful!");
+          // setUser(userObj!);
+          toast.success("Login successful!");
           navigate("/search");
         }
       })
