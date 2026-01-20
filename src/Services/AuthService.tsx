@@ -6,7 +6,7 @@ const api = "http://localhost:8080/api/v1/auth/";
 
 export const loginAPI = async (
   email: string,
-  username: string,
+  // username: string,
   password: string
 ) => {
   try {
