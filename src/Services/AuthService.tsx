@@ -1,11 +1,14 @@
 import axios from "axios";
 import { UserProfileToken } from "../Models/User";
 import { handleError } from "../Helpers/ErrorHandler";
-import { email } from "zod";
 
 const api = "http://localhost:8080/api/v1/auth/";
 
-export const loginAPI = async (username: string, password: string) => {
+export const loginAPI = async (
+  email: string,
+  username: string,
+  password: string
+) => {
   try {
     const data = await axios.post<UserProfileToken>(api + "login", {
       // username: username,
