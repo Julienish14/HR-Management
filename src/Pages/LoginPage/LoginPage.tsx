@@ -54,7 +54,7 @@ const LoginPage = (props: Props) => {
             <form className="space-y-6" onSubmit={handleSubmit(handleLogin)}>
               <div>
                 <label
-                  htmlFor="username"
+                  htmlFor="email"
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Email
@@ -99,6 +99,7 @@ const LoginPage = (props: Props) => {
                 </div>
                 <input
                   type="password"
+                  name="password"
                   id="password"
                   placeholder="Enter your password"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
