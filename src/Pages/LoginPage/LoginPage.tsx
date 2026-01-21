@@ -1,27 +1,58 @@
+// import React from "react";
+// import * as Yup from "yup";
+// import { userAuth } from "../../Context/useAuth";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import { useForm } from "react-hook-form";
+
+// type Props = {};
+
+// type LoginFormsInputs = {
+//   email: string;
+//   // username: string;
+//   password: string;
+// };
+
+// const validation = Yup.object().shape({
+//   email: Yup.string()
+//     .required("Email is required")
+//     .email("Invalid email format"),
+//   // username: Yup.string().required("Username is required"),
+//   password: Yup.string().required("Password is required"),
+// });
+
+// const LoginPage = (props: Props) => {
+//   const { loginUser } = userAuth();
+//   const {
+//     register,
+//     handleSubmit,
+//     formState: { errors },
+//   } = useForm<LoginFormsInputs>({ resolver: yupResolver(validation) });
+
+//   const handleLogin = (form: LoginFormsInputs) => {
+//     loginUser(form.email, form.password);
+//   };
 import React from "react";
 import * as Yup from "yup";
-import { userAuth } from "../../Context/useAuth";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useAuth } from "../../Context/useAuth";
 import { useForm } from "react-hook-form";
 
 type Props = {};
 
 type LoginFormsInputs = {
+  // userName: string;
   email: string;
-  // username: string;
   password: string;
 };
 
 const validation = Yup.object().shape({
-  email: Yup.string()
-    .required("Email is required")
-    .email("Invalid email format"),
-  // username: Yup.string().required("Username is required"),
+  // userName: Yup.string().required("Username is required"),
+  email: Yup.string().required("Username is required"),
   password: Yup.string().required("Password is required"),
 });
 
 const LoginPage = (props: Props) => {
-  const { loginUser } = userAuth();
+  const { loginUser } = useAuth();
   const {
     register,
     handleSubmit,
@@ -31,7 +62,6 @@ const LoginPage = (props: Props) => {
   const handleLogin = (form: LoginFormsInputs) => {
     loginUser(form.email, form.password);
   };
-
   return (
     <section className="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -61,7 +91,6 @@ const LoginPage = (props: Props) => {
                 </label>
                 <input
                   type="text"
-                  // id="username"
                   id="email"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
                   placeholder="Enter your email"
@@ -99,7 +128,6 @@ const LoginPage = (props: Props) => {
                 </div>
                 <input
                   type="password"
-                  name="password"
                   id="password"
                   placeholder="Enter your password"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
