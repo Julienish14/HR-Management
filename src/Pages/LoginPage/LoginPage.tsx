@@ -19,10 +19,24 @@ const validation = Yup.object().shape({
 });
 
 const LoginPage = (props: Props) => {
-  const { loginUser } = useAuth();
+  // Mock login function for testing
+  const mockLoginUser = async (email: string, password: string) => {
+    console.log("Mock login with:", email, password);
+    // Simulate API delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    alert(`Login successful for: ${email}`);
+  };
 
+  // Use actual auth or mock
   const auth = useAuth();
-  console.log("Auth object:", auth);
+  const loginUser = auth?.loginUser || mockLoginUser;
+
+  // ... rest of your component
+  // const LoginPage = (props: Props) => {
+  //   const { loginUser } = useAuth();
+
+  //   const auth = useAuth();
+  //   console.log("Auth object:", auth);
 
   const {
     register,
@@ -38,12 +52,6 @@ const LoginPage = (props: Props) => {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl dark:bg-gray-800 dark:border dark:border-gray-700 overflow-hidden">
           <div className="p-6 md:p-8">
-            {/* <div className="flex justify-center mb-6">
-              <div className="w-12 h-12 rounded-full bg-lightGreen flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Logo</span>
-              </div>
-            </div> */}
-
             <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-2">
               Sign in to your account
             </h1>
