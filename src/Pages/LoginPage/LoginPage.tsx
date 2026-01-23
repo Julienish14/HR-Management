@@ -32,6 +32,7 @@ const LoginPage = (props: Props) => {
   const loginUser = auth?.loginUser || mockLoginUser;
 
   // ... rest of your component
+
   // const LoginPage = (props: Props) => {
   //   const { loginUser } = useAuth();
 
