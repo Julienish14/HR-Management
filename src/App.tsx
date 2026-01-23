@@ -34,7 +34,7 @@
 import React from "react";
 import AppRoutes from "./Routes/Routes";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-red-50">
       <AppRoutes />

@@ -1,27 +1,44 @@
 import React from "react";
 import * as Yup from "yup";
-import { userAuth } from "../../Context/useAuth";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useAuth } from "../../Context/useAuth";
 import { useForm } from "react-hook-form";
 
 type Props = {};
 
 type LoginFormsInputs = {
+  // userName: string;
   email: string;
-  // username: string;
   password: string;
 };
 
 const validation = Yup.object().shape({
-  email: Yup.string()
-    .required("Email is required")
-    .email("Invalid email format"),
-  // username: Yup.string().required("Username is required"),
+  // userName: Yup.string().required("Username is required"),
+  email: Yup.string().required("Username is required"),
   password: Yup.string().required("Password is required"),
 });
 
 const LoginPage = (props: Props) => {
-  const { loginUser } = userAuth();
+  // Mock login function for testing
+  const mockLoginUser = async (email: string, password: string) => {
+    console.log("Mock login with:", email, password);
+    // Simulate API delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    alert(`Login successful for: ${email}`);
+  };
+
+  // Use actual auth or mock
+  const auth = useAuth();
+  const loginUser = auth?.loginUser || mockLoginUser;
+
+  // ... rest of your component
+
+  // const LoginPage = (props: Props) => {
+  //   const { loginUser } = useAuth();
+
+  //   const auth = useAuth();
+  //   console.log("Auth object:", auth);
+
   const {
     register,
     handleSubmit,
@@ -31,18 +48,11 @@ const LoginPage = (props: Props) => {
   const handleLogin = (form: LoginFormsInputs) => {
     loginUser(form.email, form.password);
   };
-
   return (
     <section className="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-2xl shadow-xl dark:bg-gray-800 dark:border dark:border-gray-700 overflow-hidden">
           <div className="p-6 md:p-8">
-            {/* <div className="flex justify-center mb-6">
-              <div className="w-12 h-12 rounded-full bg-lightGreen flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Logo</span>
-              </div>
-            </div> */}
-
             <h1 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-2">
               Sign in to your account
             </h1>
@@ -54,14 +64,13 @@ const LoginPage = (props: Props) => {
             <form className="space-y-6" onSubmit={handleSubmit(handleLogin)}>
               <div>
                 <label
-                  htmlFor="username"
+                  htmlFor="email"
                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Email
                 </label>
                 <input
                   type="text"
-                  // id="username"
                   id="email"
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-lightGreen focus:border-transparent outline-none transition-all"
                   placeholder="Enter your email"
@@ -113,7 +122,7 @@ const LoginPage = (props: Props) => {
 
               <button
                 type="submit"
-                className="w-full py-3 px-4 bg-lightGreen hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-medium rounded-lg focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 focus:outline-none transition-colors shadow-md hover:shadow-lg"
+                className="w-full py-3 px-4 bg-red hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-medium rounded-lg focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 focus:outline-none transition-colors shadow-md hover:shadow-lg"
                 aria-label="Sign in to account"
               >
                 Sign in
