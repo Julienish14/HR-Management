@@ -31,38 +31,16 @@
 
 // export default App;
 
-// import React from "react";
-// import AppRoutes from "./Routes/Routes";
-
-// const App = () => {
-//   return (
-//     <div className="min-h-screen bg-red-50">
-//       <AppRoutes />
-//     </div>
-//   );
-// };
-
-// export default App;
-
-// App.tsx or index.tsx
 import React from "react";
-import { AuthProvider } from "./Context/AuthContext";
+import AppRoutes from "./Routes/Routes";
 
-const LoginPage: React.FC = () => {
+const App: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      Login Page
+    <div className="min-h-screen bg-red-50">
+      <AppRoutes />
     </div>
   );
 };
-
-function App() {
-  return (
-    <AuthProvider>
-      <LoginPage />
-    </AuthProvider>
-  );
-}
 
 export default App;
 
