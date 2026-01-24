@@ -55,12 +55,14 @@ import AppRoutes from "./Routes/Routes";
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-red-50">
+      {/* <AppRoutes /> */}
+      {/* <UserProvider> */}
       <AppRoutes />
-      <UserProvider>
-        {/* <Navbar /> */}
-        <Outlet />
+
+      {/* <Navbar /> */}
+      {/* <Outlet />
         <ToastContainer />
-      </UserProvider>
+      </UserProvider> */}
     </div>
   );
 };
