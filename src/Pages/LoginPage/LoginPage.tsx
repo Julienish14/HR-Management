@@ -24,6 +24,13 @@ const LoginPage = (props: Props) => {
   const auth = useAuth();
   console.log("Auth object:", auth);
 
+  const loginUse =
+    auth.loginUser ||
+    (() => {
+      console.error("loginUser is not available");
+      return Promise.reject("loginUser is not available");
+    });
+
   const {
     register,
     handleSubmit,
