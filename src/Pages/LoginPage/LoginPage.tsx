@@ -19,25 +19,10 @@ const validation = Yup.object().shape({
 });
 
 const LoginPage = (props: Props) => {
-  // Mock login function for testing
-  const mockLoginUser = async (email: string, password: string) => {
-    console.log("Mock login with:", email, password);
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    alert(`Login successful for: ${email}`);
-  };
+  const { loginUser } = useAuth();
 
-  // Use actual auth or mock
   const auth = useAuth();
-  const loginUser = auth?.loginUser || mockLoginUser;
-
-  // ... rest of your component
-
-  // const LoginPage = (props: Props) => {
-  //   const { loginUser } = useAuth();
-
-  //   const auth = useAuth();
-  //   console.log("Auth object:", auth);
+  console.log("Auth object:", auth);
 
   const {
     register,
