@@ -19,12 +19,12 @@ const validation = Yup.object().shape({
 });
 
 const LoginPage = (props: Props) => {
-  const { loginUser } = useAuth();
+  // const { loginUser } = useAuth();
 
   const auth = useAuth();
   console.log("Auth object:", auth);
 
-  const loginUse =
+  const loginUser =
     auth.loginUser ||
     (() => {
       console.error("loginUser is not available");
