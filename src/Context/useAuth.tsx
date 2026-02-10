@@ -89,8 +89,8 @@ export const UserProvider = ({ children }: Props) => {
   };
 
   const isLoggedIn = () => {
-    // return token !== null;
-    return !!user;
+    return token !== null;
+    // return !!user;
   };
 
   const logoutUser = () => {
@@ -112,8 +112,8 @@ export const UserProvider = ({ children }: Props) => {
         isLoggedIn,
       }}
     >
-      {/* {isReady && children} */}
-      {isReady ? children : null}
+      {isReady && children}
+      {/* {isReady ? children : null} */}
     </UserContext.Provider>
   );
 };
