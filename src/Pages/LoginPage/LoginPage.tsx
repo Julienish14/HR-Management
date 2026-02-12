@@ -13,7 +13,7 @@ type LoginFormsInputs = {
 };
 
 const validation = Yup.object().shape({
-  userName: Yup.string().required("Username is required"),
+  // userName: Yup.string().required("Username is required"),
   email: Yup.string().required("Username is required"),
   password: Yup.string().required("Password is required"),
 });
@@ -76,11 +76,11 @@ const LoginPage = (props: Props) => {
                 ) : (
                   ""
                 )}
-                {/* {errors.email && (
+                {errors.email && (
                   <p className="mt-2 text-sm text-red-600 dark:text-red-400">
                     {errors.email.message}
                   </p>
-                )} */}
+                )}
               </div>
 
               <div>
