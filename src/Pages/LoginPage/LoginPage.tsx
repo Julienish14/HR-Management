@@ -76,11 +76,11 @@ const LoginPage = (props: Props) => {
                 ) : (
                   ""
                 )}
-                {errors.email && (
+                {/* {errors.email && (
                   <p className="mt-2 text-sm text-red-600 dark:text-red-400">
                     {errors.email.message}
                   </p>
-                )}
+                )} */}
               </div>
 
               <div>
