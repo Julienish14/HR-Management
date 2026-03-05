@@ -115,7 +115,7 @@ const RegisterPage = (props: Props) => {
               >
                 Sign in
               </button>
-              {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{" "}
                 <a
                   href="#"
@@ -123,7 +123,7 @@ const RegisterPage = (props: Props) => {
                 >
                   Sign up
                 </a>
-              </p> */}
+              </p>
             </form>
           </div>
         </div>
