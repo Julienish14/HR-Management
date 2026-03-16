@@ -26,7 +26,7 @@ export const portfolioGetAPI = async () => {
   try {
     const data = await axios.get<PortfolioGet[]>(api);
     return data;
-  } catch (error('messages...')) {
+  } catch (error('messages')) {
     handleError(error);
   }
 };
