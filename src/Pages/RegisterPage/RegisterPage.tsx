@@ -60,12 +60,6 @@ const RegisterPage = (props: Props) => {
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Email
-                </label>{" "}
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Email
                 </label>
                 {errors.email ? (
                   <p className="text-white">{errors.email.message}</p>
