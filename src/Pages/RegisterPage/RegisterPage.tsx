@@ -55,12 +55,6 @@ const RegisterPage = (props: Props) => {
                   placeholder="Email"
                   {...register("email")}
                 />
-                <label
-                  htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Email
-                </label>
                 {errors.email ? (
                   <p className="text-white">{errors.email.message}</p>
                 ) : (
@@ -121,7 +115,7 @@ const RegisterPage = (props: Props) => {
               >
                 Sign in
               </button>
-              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+              {/* <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{" "}
                 <a
                   href="#"
@@ -129,7 +123,7 @@ const RegisterPage = (props: Props) => {
                 >
                   Sign up
                 </a>
-              </p>
+              </p> */}
             </form>
           </div>
         </div>
