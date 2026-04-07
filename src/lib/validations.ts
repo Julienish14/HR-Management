@@ -69,14 +69,7 @@ export const checkPasswordStrength = (
 
   if (/[0-9]/.test(password)) score += 1;
   else feedback.push("One number");
-  if (/[A-Z]/.test(password)) score += 1;
-  else feedback.push("One uppercase letter");
 
-  if (/[a-z]/.test(password)) score += 1;
-  else feedback.push("One lowercase letter");
-
-  if (/[0-9]/.test(password)) score += 1;
-  else feedback.push("One number");
   if (/[^A-Za-z0-9]/.test(password)) score += 1;
   else feedback.push("One special character");
 
