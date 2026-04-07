@@ -29,14 +29,14 @@ export const signupSchema = z
       .regex(/[0-9]/, "Password must contain at least one number")
       .regex(
         /[^A-Za-z0-9]/,
-        "Password must contain at least one special character"
+        "Password must contain at least one special character",
       ),
     confirmPassword: z.string().min(1, "Please confirm your password"),
     acceptTerms: z
       .boolean()
       .refine(
         (val) => val === true,
-        "You must accept the terms and conditions"
+        "You must accept the terms and conditions",
       ),
   })
   .refine((data) => data.password === data.confirmPassword, {
@@ -49,7 +49,7 @@ export type SignupFormData = z.infer<typeof signupSchema>;
 
 // Password strength checker
 export const checkPasswordStrength = (
-  password: string
+  password: string,
 ): {
   score: number;
   strength: "Weak" | "Fair" | "Good" | "Strong";
@@ -69,7 +69,14 @@ export const checkPasswordStrength = (
 
   if (/[0-9]/.test(password)) score += 1;
   else feedback.push("One number");
+  if (/[A-Z]/.test(password)) score += 1;
+  else feedback.push("One uppercase letter");
 
+  if (/[a-z]/.test(password)) score += 1;
+  else feedback.push("One lowercase letter");
+
+  if (/[0-9]/.test(password)) score += 1;
+  else feedback.push("One number");
   if (/[^A-Za-z0-9]/.test(password)) score += 1;
   else feedback.push("One special character");
 
