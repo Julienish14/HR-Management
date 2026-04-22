@@ -23,6 +23,8 @@ export const handleError = (error: any) => {
       toast.warning("Resource not found");
     } else if (err) {
       toast.warning(err?.data);
+    } else {
+      toast.warning("An unknown error occurred");
     }
   }
 };
