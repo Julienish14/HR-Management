@@ -34,8 +34,8 @@ const LoginPage = (props: Props) => {
   const { loginUser } = useAuth();
 
   const auth = useAuth();
-  console.log("Auth object:", auth);
-
+  // console.log("Auth object:", auth);
+  // console.log("loginUser:", loginUser);
   const loginUserd =
     auth.loginUser ||
     (() => {
@@ -50,8 +50,14 @@ const LoginPage = (props: Props) => {
   } = useForm<LoginFormsInputs>({ resolver: yupResolver(validation) });
 
   const handleLogin = (form: LoginFormsInputs) => {
+    // loginUser(form.email, form.password);
+    // loginUserd(form.email, form.password);
+    if (!loginUser) {
+      console.error("loginUser is not available");
+      return;
+    }
+
     loginUser(form.email, form.password);
-    loginUserd(form.email, form.password);
   };
   return (
     <section className="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4">
