@@ -18,6 +18,18 @@ const validation = Yup.object().shape({
   password: Yup.string().required("Password is required"),
 });
 
+// const LoginPage = () => {
+//   const { loginUser } = useAuth();
+
+//   const handleLogin = (form: LoginFormsInputs) => {
+//     if (!loginUser) {
+//       console.error("loginUser is not available");
+//       return;
+//     }
+
+//     loginUser(form.email, form.password);
+//   };
+
 const LoginPage = (props: Props) => {
   const { loginUser } = useAuth();
 
