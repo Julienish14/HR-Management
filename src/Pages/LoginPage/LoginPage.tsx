@@ -28,7 +28,7 @@ const validation = Yup.object().shape({
 //     }
 
 //     loginUser(form.email, form.password);
-//   };
+//   }
 
 const LoginPage = (props: Props) => {
   const { loginUser } = useAuth();
