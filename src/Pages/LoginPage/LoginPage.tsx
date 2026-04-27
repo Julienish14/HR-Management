@@ -18,24 +18,11 @@ const validation = Yup.object().shape({
   password: Yup.string().required("Password is required"),
 });
 
-// const LoginPage = () => {
-//   const { loginUser } = useAuth();
-
-//   const handleLogin = (form: LoginFormsInputs) => {
-//     if (!loginUser) {
-//       console.error("loginUser is not available");
-//       return;
-//     }
-
-//     loginUser(form.email, form.password);
-//   }
-
 const LoginPage = (props: Props) => {
   const { loginUser } = useAuth();
 
   const auth = useAuth();
-  // console.log("Auth object:", auth);
-  // console.log("loginUser:", loginUser);
+
   const loginUserd =
     auth.loginUser ||
     (() => {
@@ -50,8 +37,6 @@ const LoginPage = (props: Props) => {
   } = useForm<LoginFormsInputs>({ resolver: yupResolver(validation) });
 
   const handleLogin = (form: LoginFormsInputs) => {
-    // loginUser(form.email, form.password);
-    // loginUserd(form.email, form.password);
     if (!loginUser) {
       console.error("loginUser is not available");
       return;
