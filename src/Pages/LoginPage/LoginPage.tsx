@@ -36,15 +36,8 @@ const LoginPage = (props: Props) => {
   const auth = useAuth();
   console.log("Auth object:", auth);
 
-  const handleLogin = (form: LoginFormsInputs) => {
-    if (!loginUser) {
-      console.error("loginUser is not available");
-      return;
-    }
-
-    loginUser(form.email, form.password);
-  };
-  auth.loginUser ||
+  const loginUserd =
+    auth.loginUser ||
     (() => {
       console.error("loginUser is not available");
       return Promise.reject("loginUser is not available");
@@ -58,6 +51,7 @@ const LoginPage = (props: Props) => {
 
   const handleLogin = (form: LoginFormsInputs) => {
     loginUser(form.email, form.password);
+    loginUserd(form.email, form.password);
   };
   return (
     <section className="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center p-4">
