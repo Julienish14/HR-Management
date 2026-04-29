@@ -22,14 +22,13 @@ const LoginPage = (props: Props) => {
   const { loginUser } = useAuth();
 
   const auth = useAuth();
-  console.log("Auth object:", auth);
 
-  const loginUserd =
-    auth.loginUser ||
-    (() => {
-      console.error("loginUser is not available");
-      return Promise.reject("loginUser is not available");
-    });
+  // const loginUserd =
+  //   auth.loginUser ||
+  //   (() => {
+  //     console.error("loginUser is not available");
+  //     return Promise.reject("loginUser is not available");
+  //   });
 
   const {
     register,
@@ -38,6 +37,11 @@ const LoginPage = (props: Props) => {
   } = useForm<LoginFormsInputs>({ resolver: yupResolver(validation) });
 
   const handleLogin = (form: LoginFormsInputs) => {
+    if (!loginUser) {
+      console.error("login user is not available");
+      return;
+    }
+
     loginUser(form.email, form.password);
   };
   return (
