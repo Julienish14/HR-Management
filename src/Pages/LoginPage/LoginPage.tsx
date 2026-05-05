@@ -23,12 +23,12 @@ const LoginPage = (props: Props) => {
 
   const auth = useAuth();
 
-  const loginUserd =
-    auth.loginUser ||
-    (() => {
-      console.error("loginUser is not available");
-      return Promise.reject("loginUser is not available");
-    });
+  // const loginUserd =
+  //   auth.loginUser ||
+  //   (() => {
+  //     console.error("loginUser is not available");
+  //     return Promise.reject("loginUser is not available");
+  //   });
 
   const {
     register,
@@ -38,7 +38,7 @@ const LoginPage = (props: Props) => {
 
   const handleLogin = (form: LoginFormsInputs) => {
     if (!loginUser) {
-      console.error("login user is not available");
+      console.error("login is not available");
       return;
     }
 
