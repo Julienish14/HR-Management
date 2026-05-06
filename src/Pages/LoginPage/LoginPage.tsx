@@ -38,7 +38,7 @@ const LoginPage = (props: Props) => {
 
   const handleLogin = (form: LoginFormsInputs) => {
     if (!loginUser) {
-      console.error("login user is not available");
+      console.error("login is not available");
       return;
     }
 
