@@ -14,17 +14,17 @@ const ProtectedRoute = ({ children }: Props) => {
   );
 };
 
-const AuthContext = createContext<any>(null);
+// const AuthContext = createContext<any>(null);
 
-export const AuthProvider = ({ children }: any) => {
-  const loginUser = async (email: string, password: string) => {
-    // your API call
-  };
+// export const AuthProvider = ({ children }: any) => {
+//   const loginUser = async (email: string, password: string) => {
+//     // your API call
+//   };
 
-  return (
-    <AuthContext.Provider value={{ loginUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-export default ProtectedRoute;
+//   return (
+//     <AuthContext.Provider value={{ loginUser }}>
+//       {children}
+//     </AuthContext.Provider>
+//   );
+// };
+// export default ProtectedRoute;
