@@ -13,18 +13,3 @@ const ProtectedRoute = ({ children }: Props) => {
     <Navigate to="/login" state={{ from: location }} replace />
   );
 };
-
-const AuthContext = createContext<any>(null);
-
-export const AuthProvider = ({ children }: any) => {
-  const loginUser = async (email: string, password: string) => {
-    // your API call
-  };
-
-  return (
-    <AuthContext.Provider value={{ loginUser }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-export default ProtectedRoute;
