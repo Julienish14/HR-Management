@@ -25,7 +25,7 @@ const AppRoutes: React.FC = () => {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-        <AppRoutes />
+      <AppRoutes
         <Routes>
           {routes.map((route) => (
             <Route key={route.path} path={route.path} element={route.element} />
