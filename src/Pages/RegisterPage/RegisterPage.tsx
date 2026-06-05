@@ -46,6 +46,26 @@ const RegisterPage = (props: Props) => {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
+                  Full name
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Full name"
+                  {...register("email")}
+                />
+                {errors.email ? (
+                  <p className="text-white">{errors.email.message}</p>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
                   Email
                 </label>
                 <input
@@ -101,6 +121,26 @@ const RegisterPage = (props: Props) => {
                   ""
                 )}
               </div>
+              <div>
+                <label
+                  htmlFor="password"
+                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="••••••••"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  {...register("password")}
+                />
+                {errors.password ? (
+                  <p className="text-white">{errors.password.message}</p>
+                ) : (
+                  ""
+                )}
+              </div>
               <div className="flex items-center justify-between">
                 <a
                   href="#"
@@ -111,9 +151,10 @@ const RegisterPage = (props: Props) => {
               </div>
               <button
                 type="submit"
-                className="w-full text-white bg-lightGreen hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                className="w-full py-3 px-4 bg-red hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-medium rounded-lg focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 focus:outline-none transition-colors shadow-md hover:shadow-lg"
+                aria-label="Sign in to account"
               >
-                Sign in
+                Register
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{" "}
@@ -121,7 +162,7 @@ const RegisterPage = (props: Props) => {
                   href="#"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
-                  Sign up
+                  {/* Sign up */}
                 </a>
               </p>
             </form>
