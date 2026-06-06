@@ -126,7 +126,7 @@ const RegisterPage = (props: Props) => {
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Confirm Password...
+                  Confirm Password
                 </label>
                 <input
                   type="password"
