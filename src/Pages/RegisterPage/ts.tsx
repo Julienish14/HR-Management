@@ -9,8 +9,8 @@ import { Suspense, lazy } from "react";
 import { RouteConfig } from "./Routes.types";
 
 // Lazy load pages
-const LoginPage = lazy(() => import("./Pages/LoginPage/LoginPage"));
-const DashboardPage = lazy(() => import("./Pages/DashboardPage/DashboardPage"));
+// const LoginPage = lazy(() => import("./Pages/LoginPage/LoginPage"));
+// const DashboardPage = lazy(() => import('./Pages/DashboardPage/DashboardPage'));
 
 const routes: RouteConfig[] = [
   {
