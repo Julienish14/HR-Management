@@ -126,7 +126,7 @@ const RegisterPage = (props: Props) => {
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
-                  Confirm Password
+                  Confirm Password...
                 </label>
                 <input
                   type="password"
@@ -157,8 +157,9 @@ const RegisterPage = (props: Props) => {
               >
                 Register
               </button>
+
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet?{" "}
+                {/* Don’t have an account yet?{" "} */}
                 <a
                   href="#"
                   className="font-medium text-primary-600 hover:underline dark:text-primary-500"
