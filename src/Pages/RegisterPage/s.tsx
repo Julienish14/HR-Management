@@ -32,11 +32,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         body: JSON.stringify({ email, password }),
       });
 
-      //   if (response.ok) {
-      //     const userData = await response.json();
-      //     setUser(userData);
-      //     setIsAuthenticated(true);
-      //   }
+      if (response.ok) {
+        const userData = await response.json();
+        setUser(userData);
+        setIsAuthenticated(true);
+      }
 
       // For testing:
       setUser({ email, name: "Test User" });
