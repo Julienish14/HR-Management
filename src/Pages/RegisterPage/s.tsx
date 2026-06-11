@@ -25,18 +25,18 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       // Your login logic here
       console.log("Logging in with:", email, password);
 
-      // Example API call
-      // const response = await fetch('/api/login', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email, password }),
-      // });
+      //   Example API call
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-      // if (response.ok) {
-      //   const userData = await response.json();
-      //   setUser(userData);
-      //   setIsAuthenticated(true);
-      // }
+      if (response.ok) {
+        const userData = await response.json();
+        setUser(userData);
+        setIsAuthenticated(true);
+      }
 
       // For testing:
       setUser({ email, name: "Test User" });
