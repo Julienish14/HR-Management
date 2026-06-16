@@ -6,7 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { Suspense, lazy } from "react";
-// import { RouteConfig } from "./Routes.types";
+import { RouteConfig } from "./Routes.types";
 
 // Lazy load pages
 // const LoginPage = lazy(() => import("./Pages/LoginPage/LoginPage"));
