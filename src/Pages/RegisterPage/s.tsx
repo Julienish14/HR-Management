@@ -24,7 +24,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       // Your login logic here
       console.log("Logging in with:", email, password);
-      console.log("loggin: ", username);
 
       //   Example API call
       const response = await fetch("/api/login", {
