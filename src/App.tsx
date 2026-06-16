@@ -2,12 +2,12 @@
 // // import LoginPage from "./pages/LoginPage";
 // // import SignUpPage from "./pages/SignUpPage";
 
-import { Outlet } from "react-router";
-import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
-import { ToastContainer } from "react-toastify";
-import { UserProvider } from "./Context/useAuth";
-import AppRoutes from "./Routes/Routes";
+// import { Outlet } from "react-router";
+// import "react-toastify/dist/ReactToastify.css";
+// import "./App.css";
+// import { ToastContainer } from "react-toastify";
+// import { UserProvider } from "./Context/useAuth";
+// import AppRoutes from "./Routes/Routes";
 
 function App() {
   return (
