@@ -20,6 +20,13 @@ interface Activity {
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
+  const stats = [
+    { title: "Total Users", value: "12,543", change: "+12.5%", icon: "👥" },
+    { title: "Revenue", value: "$45,231", change: "+8.2%", icon: "💰" },
+    { title: "Active Projects", value: "87", change: "-3.1%", icon: "📊" },
+    { title: "Tasks Completed", value: "1,243", change: "+23.6%", icon: "✅" },
+  ];
+
   const chartData = [
     { month: "Jan", value: 30 },
     { month: "Feb", value: 45 },
