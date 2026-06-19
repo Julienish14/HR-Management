@@ -27,14 +27,6 @@ const App: React.FC = () => {
     { title: "Tasks Completed", value: "1,243", change: "+23.6%", icon: "✅" },
   ];
 
-  const chartData = [
-    { month: "Jan", value: 30 },
-    { month: "Feb", value: 45 },
-    { month: "Mar", value: 28 },
-    { month: "Apr", value: 60 },
-    { month: "May", value: 55 },
-    { month: "Jun", value: 70 },
-  ];
   const recentActivities: Activity[] = [
     {
       id: 1,
@@ -61,6 +53,16 @@ const App: React.FC = () => {
       time: "3 hours ago",
     },
   ];
+
+  const chartData = [
+    { month: "Jan", value: 30 },
+    { month: "Feb", value: 45 },
+    { month: "Mar", value: 28 },
+    { month: "Apr", value: 60 },
+    { month: "May", value: 55 },
+    { month: "Jun", value: 70 },
+  ];
+
   return (
     <div className="app">
       <Sidebar isOpen={sidebarOpen} />
