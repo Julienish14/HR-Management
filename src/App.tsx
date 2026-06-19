@@ -9,27 +9,27 @@
 // import { UserProvider } from "./Context/useAuth";
 // import AppRoutes from "./Routes/Routes";
 
-function App() {
-  return (
-    <>
-      <UserProvider>
-        {/* <Navbar /> */}
-        <Outlet />
-        <ToastContainer />
-      </UserProvider>
-      <AppRoutes />
-    </>
-    // <Router>
-    //   <Routes>
-    //     <Route path="/login" element={<LoginPage />} />
-    //     {/* <Route path="/signup" element={<SignUpPage />} /> */}
-    //     {/* <Route path="/" element={<LoginPage />} /> */}
-    //   </Routes>
-    // </Router>
-  );
-}
+// function App() {
+//   return (
+//     <>
+//       <UserProvider>
+//         {/* <Navbar /> */}
+//         <Outlet />
+//         <ToastContainer />
+//       </UserProvider>
+//       <AppRoutes />
+//     </>
+//     // <Router>
+//     //   <Routes>
+//     //     <Route path="/login" element={<LoginPage />} />
+//     //     {/* <Route path="/signup" element={<SignUpPage />} /> */}
+//     //     {/* <Route path="/" element={<LoginPage />} /> */}
+//     //   </Routes>
+//     // </Router>
+//   );
+// }
 
-export default App;
+// export default App;
 
 import React from "react";
 import AppRoutes from "./Routes/Routes";
