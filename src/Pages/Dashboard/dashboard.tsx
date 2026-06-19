@@ -20,6 +20,11 @@ interface Activity {
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
+  const chartData = [
+    { month: "Jan", value: 30 },
+    { month: "Feb", value: 45 },
+    { month: "Mar", value: 28 },
+  ];
   const recentActivities: Activity[] = [
     {
       id: 1,
