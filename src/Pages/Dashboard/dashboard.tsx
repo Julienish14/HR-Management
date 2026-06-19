@@ -24,6 +24,9 @@ const App: React.FC = () => {
     { month: "Jan", value: 30 },
     { month: "Feb", value: 45 },
     { month: "Mar", value: 28 },
+    { month: "Apr", value: 60 },
+    { month: "May", value: 55 },
+    { month: "Jun", value: 70 },
   ];
   const recentActivities: Activity[] = [
     {
