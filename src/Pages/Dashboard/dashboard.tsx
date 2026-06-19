@@ -20,6 +20,32 @@ interface Activity {
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
+  const recentActivities: Activity[] = [
+    {
+      id: 1,
+      user: "John Doe",
+      action: "created a new project",
+      time: "2 minutes ago",
+    },
+    {
+      id: 2,
+      user: "Jane Smith",
+      action: "updated the dashboard",
+      time: "15 minutes ago",
+    },
+    {
+      id: 3,
+      user: "Bob Johnson",
+      action: "completed a task",
+      time: "1 hour ago",
+    },
+    {
+      id: 4,
+      user: "Alice Brown",
+      action: "added a new user",
+      time: "3 hours ago",
+    },
+  ];
   return (
     <div className="app">
       <Sidebar isOpen={sidebarOpen} />
