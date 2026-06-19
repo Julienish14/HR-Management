@@ -18,14 +18,15 @@ interface Activity {
 }
 
 const App: React.FC = () => {
-  
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
     <div className="app">
-      <Sidebar isOpen=} />
-      <div className={`main-content ${ ? "expanded" : ""}`}>
+      <Sidebar isOpen={sidebarOpen} />
+      <div className={`main-content ${!sidebarOpen ? "expanded" : ""}`}>
         <Header
           title="Dashboard"
-          toggleSidebar={() => setSidebarOpen()}
+          toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
         />
         <div className="content">
           <div className="stats-grid">
