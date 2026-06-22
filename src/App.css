@@ -114,3 +114,27 @@
   align-items: center;
   gap: 20px;
 }
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.menu-toggle:hover {
+  background: #f0f2f5;
+}
+
+.header-left h1 {
+  font-size: 24px;
+  color: #1a1a2e;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
