@@ -77,3 +77,24 @@
   flex: 1;
   padding: 20px 0;
 }
+
+.nav-icon {
+  font-size: 20px;
+  min-width: 30px;
+}
+
+.nav-label {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 70px;
+}
