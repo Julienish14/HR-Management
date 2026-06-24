@@ -139,11 +139,11 @@
   gap: 20px;
 }
 
-.header-right {
+/* .header-right {
   display: flex;
   align-items: center;
   gap: 20px;
-}
+} */
 
 .search-box input {
   padding: 8px 16px;
