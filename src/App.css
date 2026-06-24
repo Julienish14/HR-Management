@@ -162,3 +162,28 @@
   display: flex;
   gap: 15px;
 }
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.icon:hover {
+  background: #f0f2f5;
+}
+
+/* Content */
+.content {
+  padding: 30px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
