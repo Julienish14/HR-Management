@@ -29,13 +29,6 @@ const Chart: React.FC<ChartProps> = ({ data }) => {
           </div>
         ))}
       </div>
-      <div className="chart-values">
-        {data.map((item, index) => (
-          <span key={index} className="chart-value">
-            {item.value}
-          </span>
-        ))}
-      </div>
     </div>
   );
 };
