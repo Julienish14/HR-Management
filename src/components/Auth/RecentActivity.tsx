@@ -1,3 +1,4 @@
+// components/RecentActivity.tsx
 import React from "react";
 
 interface Activity {
@@ -6,6 +7,13 @@ interface Activity {
   action: string;
   time: string;
 }
-export default function RecentActivity() {
-  return <div>RecentActivity</div>;
+
+interface RecentActivityProps {
+  activities: Activity[];
 }
+
+const RecentActivity: React.FC<RecentActivityProps> = ({ activities }) => {
+  return <div className="activity-list"></div>;
+};
+
+export default RecentActivity;
