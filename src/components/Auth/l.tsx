@@ -22,7 +22,7 @@ const Chart: React.FC<ChartProps> = ({ data }) => {
               className="chart-bar"
               style={{
                 height: `${(item.value / maxValue) * 100}%`,
-                backgroundColor: `hsl(${index * 40}, 90%, 0%)`,
+                backgroundColor: `hsl(${index * 40}, 90%, 50%)`,
               }}
             />
             <span className="chart-label">{item.month}</span>
