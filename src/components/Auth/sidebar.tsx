@@ -10,6 +10,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     { icon: '🏠', label: 'Dashboard', active: true },
     { icon: '📊', label: 'Analytics' },
     { icon: '👥', label: 'Users' },
+    { icon: '📝', label: 'Projects' },
+    { icon: '📅', label: 'Calendar' },
+    { icon: '⚙️', label: 'Settings' },
   ];
 
  
