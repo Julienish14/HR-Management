@@ -7,7 +7,7 @@ interface StatsCardProps {
   icon: string;
 }
 
-const StatsCard: React.FC<> = ({
+const StatsCard: React.FC<StatsCardProps> = ({
   title,
   value,
   change,
