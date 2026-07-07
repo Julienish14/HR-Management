@@ -1,6 +1,11 @@
 import React from "react";
 
-
+interface StatsCardProps {
+  title: string;
+  value: string;
+  change: string;
+  icon: string;
+}
 
 const StatsCard: React.FC<> = ({
   title,
