@@ -18,6 +18,10 @@ const Header: React.FC<HeaderProps> = ({ title, toggleSidebar }) => {
         <div className="search-box">
           <input type="text" placeholder="Search..." />
         </div>
+        <div className="header-icons">
+          <span className="icon">🔔</span>
+          <span className="icon">👤</span>
+        </div>
       </div>
     </header>
   );
