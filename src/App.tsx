@@ -54,3 +54,11 @@ import Header from "./components/Header";
 import StatsCard from "./components/StatsCard";
 import RecentActivity from "./components/RecentActivity";
 import Chart from "./components/Chart";
+
+// Types
+interface Activity {
+  id: number;
+  user: string;
+  action: string;
+  time: string;
+}
