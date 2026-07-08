@@ -6,6 +6,15 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ title, toggleSidebar }) => {
-  return <header className="header"></header>;
+  return (
+    <header className="header">
+      <div className="header-left">
+        <button className="menu-toggle" onClick={toggleSidebar}>
+          ☰
+        </button>
+        <h1>{title}</h1>
+      </div>
+    </header>
+  );
 };
 export default Header;
