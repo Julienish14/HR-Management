@@ -5,6 +5,6 @@ interface HeaderProps {
   toggleSidebar: () => void;
 }
 
-export default function Headers() {
+const Header: React.FC<HeaderProps> = ({ title, toggleSidebar }) => {
   return <div>Headers</div>;
-}
+};
