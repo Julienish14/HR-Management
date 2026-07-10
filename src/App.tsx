@@ -31,15 +31,34 @@
 
 // export default App;
 
-import React from "react";
-import AppRoutes from "./Routes/Routes";
+// import React from "react";
+// import AppRoutes from "./Routes/Routes";
 
-const App: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-red-50">
-      <AppRoutes />
-    </div>
-  );
-};
+// const App: React.FC = () => {
+//   return (
+//     <div className="min-h-screen bg-red-50">
+//       <AppRoutes />
+//     </div>
+//   );
+// };
 
-export default App;
+// export default App;
+
+// App.tsx
+import React, { useState } from "react";
+import "./App.css";
+
+// Components
+import Sidebar from "./components/StatsCard";
+import Header from "./components/Headers";
+import StatsCard from "./components/StatsCard";
+import RecentActivity from "./components/RecentActivity";
+// import Chart from "./components/Chart";
+
+// Types
+interface Activity {
+  id: number;
+  user: string;
+  action: string;
+  time: string;
+}
