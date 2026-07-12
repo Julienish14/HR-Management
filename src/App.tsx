@@ -49,11 +49,11 @@ import React, { useState } from "react";
 import "./App.css";
 
 // Components
-import Sidebar from "./components/StatsCard";
+import Sidebar from "./components/";
 import Header from "./components/Headers";
 import StatsCard from "./components/StatsCard";
 import RecentActivity from "./components/RecentActivity";
-// import Chart from "./components/Chart";
+import Chart from "./components/Chart";
 
 // Types
 interface Activity {
