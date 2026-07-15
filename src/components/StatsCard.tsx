@@ -32,10 +32,10 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ activities }) => {
     <div className="activity-list">
       {activities.map((activity) => (
         <div key={activity.id} className="activity-item">
-          <div className="activity-content">
+          {/* <div className="activity-content">
             <span className="activity-user">{activity.user}</span>
             <span className="activity-action">{activity.action}</span>
-          </div>
+          </div> */}
           <span className="activity-time">{activity.time}</span>
         </div>
       ))}
