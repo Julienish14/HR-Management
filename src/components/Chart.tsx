@@ -1,6 +1,9 @@
+// components/RecentActivity.tsx
 import React from "react";
 
-interface RecentActivityProps {}
+interface RecentActivityProps {
+  activities: Activity[];
+}
 
 const RecentActivity: React.FC<RecentActivityProps> = ({ activities }) => {
   return (
