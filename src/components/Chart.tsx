@@ -1,6 +1,13 @@
 // components/RecentActivity.tsx
 import React from "react";
 
+interface Activity {
+  id: number;
+  user: string;
+  action: string;
+  time: string;
+}
+
 interface RecentActivityProps {
   activities: Activity[];
 }
