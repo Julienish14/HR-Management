@@ -1,46 +1,43 @@
+// components/Chart.tsx
 import React from "react";
 
-interface StatsCardProps {
-  title: string;
-  value: string;
-  change: string;
-  icon: string;
+interface ChartData {
+  month: string;
+  value: number;
 }
 
-const StatsCard: React.FC<StatsCardProps> = ({
-  title,
-  value,
-  change,
-  icon,
-}) => {
-  const isPositive = change.startsWith("+");
-  const changeColor = isPositive ? "positive" : "negative";
+interface ChartProps {
+  data: ChartData[];
+}
+
+const Chart: React.FC<ChartProps> = ({ data }) => {
+  const maxValue = Math.max(...data.map((d) => d.value));
 
   return (
-    <div className="stats-card">
-      <div className="stats-header">
-        <span className="stats-icon">{icon}</span>
-        <span className={`stats-change ${changeColor}`}>{change}</span>
+    <div className="chart">
+      <div className="chart-bars">
+        {data.map((item, index) => (
+          <div key={index} className="chart-bar-wrapper">
+            <div
+              className="chart-bar"
+              style={{
+                height: `${(item.value / maxValue) * 100}%`,
+                backgroundColor: `hsl(${index * 40}, 70%, 50%)`,
+              }}
+            />
+            <span className="chart-label">{item.month}</span>
+          </div>
+        ))}
       </div>
-      <div className="stats-value">{value}</div>
-      <div className="stats-title">{title}</div>
-    </div>
-  );
-};
-const RecentActivity: React.FC<RecentActivityProps> = ({ activities }) => {
-  return (
-    <div className="activity-list">
-      {activities.map((activity) => (
-        <div key={activity.id} className="activity-item">
-          {/* <div className="activity-content">
-            <span className="activity-user">{activity.user}</span>
-            <span className="activity-action">{activity.action}</span>
-          </div> */}
-          <span className="activity-time">{activity.time}</span>
-        </div>
-      ))}
+      <div className="chart-values">
+        {data.map((item, index) => (
+          <span key={index} className="chart-value">
+            {item.value}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default StatsCard;
+export default Chart;
