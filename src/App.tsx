@@ -49,16 +49,15 @@ import React, { useState } from "react";
 import "./App.css";
 
 // Components
-import Sidebar from "./components/StatsCard";
+import Sidebar from "./components/";
 import Header from "./components/Headers";
 import StatsCard from "./components/StatsCard";
 import RecentActivity from "./components/RecentActivity";
-// import Chart from "./components/Chart";
+import Chart from "./components/Chart";
 
-// Types
-interface Activity {
-  id: number;
-  user: string;
-  action: string;
-  time: string;
-}
+const stats = [
+  { title: "Total Users", value: "12,543", change: "+12.5%", icon: "👥" },
+  { title: "Revenue", value: "$45,231", change: "+8.2%", icon: "💰" },
+  { title: "Active Projects", value: "87", change: "-3.1%", icon: "📊" },
+  { title: "Tasks Completed", value: "1,243", change: "+23.6%", icon: "✅" },
+];

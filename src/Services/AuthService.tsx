@@ -3,7 +3,12 @@ import { UserProfileToken } from "../Models/User";
 import { handleError } from "../Helpers/ErrorHandler";
 
 const api = "http://localhost:8081/api/v1/auth/";
-
+interface Activity {
+  id: number;
+  user: string;
+  action: string;
+  time: string;
+}
 export const loginAPI = async (
   email: string,
   // username: string,
