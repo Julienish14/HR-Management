@@ -55,8 +55,6 @@ import StatsCard from "./components/StatsCard";
 import RecentActivity from "./components/RecentActivity";
 import Chart from "./components/Chart";
 
-const [sidebarOpen, setSidebarOpen] = useState(true);
-
 const stats = [
   { title: "Total Users", value: "12,543", change: "+12.5%", icon: "👥" },
   { title: "Revenue", value: "$45,231", change: "+8.2%", icon: "💰" },
