@@ -117,6 +117,31 @@ export const UserProvider = ({ children }: Props) => {
     </UserContext.Provider>
   );
 };
-
+  return (
+    <div className="chart">
+      <div className="chart-bars">
+        {data.map((item, index) => (
+          <div key={index} className="chart-bar-wrapper">
+            <div
+              className="chart-bar"
+              style={{
+                height: `${(item.value / maxValue) * 100}%`,
+                backgroundColor: `hsl(${index * 40}, 70%, 50%)`,
+              }}
+            />
+            <span className="chart-label">{item.month}</span>
+          </div>
+        ))}
+      </div>
+      <div className="chart-values">
+        {data.map((item, index) => (
+          <span key={index} className="chart-value">
+            {item.value}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
 // export const userAuth = () => useContext(UserContext);
 export const useAuth = () => React.useContext(UserContext);
