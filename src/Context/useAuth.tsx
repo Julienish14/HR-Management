@@ -13,7 +13,7 @@ type UserContextType = {
     fullname: string,
     email: string,
     username: string,
-    password: string
+    password: string,
   ) => void;
   loginUser: (email: string, password: string) => void;
   logoutUser: () => void;
@@ -45,7 +45,7 @@ export const UserProvider = ({ children }: Props) => {
     fullname: string,
     email: string,
     username: string,
-    password: string
+    password: string,
   ) => {
     await registerAPI(fullname, email, username, password)
       .then((res) => {
@@ -68,7 +68,7 @@ export const UserProvider = ({ children }: Props) => {
   const loginUser = async (
     email: string,
     // username: string,
-    password: string
+    password: string,
   ) => {
     await loginAPI(email, password)
       .then((res) => {
