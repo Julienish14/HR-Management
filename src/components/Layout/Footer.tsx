@@ -11,3 +11,12 @@
     ))}
   </nav>
 </aside>;
+  const {
+register
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormsInputs>({ resolver: yupResolver(validation) });
+
+  const handleLogin = (form: LoginFormsInputs) => {
+    loginUser(form.email, form.password);
+  };
