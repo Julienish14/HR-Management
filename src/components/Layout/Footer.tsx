@@ -7,7 +7,7 @@
       <div key={index} className={`nav-item ${item.active ? "active" : ""}`}>
         <span className="nav-icon">{item.icon}</span>
         {isOpen && <span className="nav-label">{item.label}</span>}
-      </div>
+      </div> 
     ))}
   </nav>
 </aside>;

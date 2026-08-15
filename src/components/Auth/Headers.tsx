@@ -26,4 +26,5 @@ const Header: React.FC<HeaderProps> = ({ title, toggleSidebar }) => {
     </header>
   );
 };
+
 export default Header;
