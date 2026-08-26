@@ -17,8 +17,8 @@ const validation = Yup.object().shape({
   userName: Yup.string().required("Username is required"),
   password: Yup.string().required("Password is required"),
 });
-const vadation = Yup.object().shape({
-  email: Yup.string().required(""),
+const validation = Yup.object().shape({
+  email: Yup.string().required("Email is required"),
   userName: Yup.string().required("Username is required"),
   password: Yup.string().required("Password is required"),
 });
