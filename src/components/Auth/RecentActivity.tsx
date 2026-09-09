@@ -24,7 +24,15 @@ const RecentActivity: React.FC<RecentActivityProps> = ({ activities }) => {
           </div>
           <span className="activity-time">{activity.time}</span>
         </div>
+        
       ))}
+      <div key={.id} className="activity-item">
+          <div className="activity-content">
+            <span className="activity-user">{acivity.user}</span>
+            <span className="activity-action">{ativity.action}</span>
+          </div>
+          <span className="activity-time">{acivity.time}</span>
+        </div>
     </div>
   );
 
