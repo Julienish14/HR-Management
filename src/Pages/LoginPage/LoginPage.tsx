@@ -116,13 +116,13 @@ const LoginPage = (props: Props) => {
                 )}
               </div>
 
-              <button
+              {/* <button
                 type="submit"
                 className="w-full py-3 px-4 bg-red hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-medium rounded-lg focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 focus:outline-none transition-colors shadow-md hover:shadow-lg"
                 aria-label="Sign in to account"
               >
                 Sign in
-              </button>
+              </button> */}
 
               <div className="relative my-6">
                 <div className="absolute inset-0 flex items-center">
