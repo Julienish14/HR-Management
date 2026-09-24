@@ -228,6 +228,24 @@ const LoginPage = (props: Props) => {
             </a>
           </p>
         </div>
+        <div className="mt-6 text-center">
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            By continuing, you agree to our{" "}
+            <a
+              href="#"
+              className="underline hover:text-gray-700 dark:hover:text-gray-300"
+            >
+              Terms
+            </a>{" "}
+            and{" "}
+            <a
+              href="#"
+              className="underline hover:text-gray-700 dark:hover:text-gray-300"
+            >
+              Privacy Policy
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );
