@@ -116,13 +116,13 @@ const LoginPage = (props: Props) => {
                 )}
               </div>
 
-              <button
+              {/* <button
                 type="submit"
                 className="w-full py-3 px-4 bg-red hover:bg-green-600 dark:bg-green-600 dark:hover:bg-green-700 text-white font-medium rounded-lg focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 focus:outline-none transition-colors shadow-md hover:shadow-lg"
                 aria-label="Sign in to account"
               >
                 Sign in
-              </button>
+              </button> */}
 
               <div className="relative my-6">
                 <div className="absolute inset-0 flex items-center">
@@ -210,6 +210,24 @@ const LoginPage = (props: Props) => {
         </div>
 
         {/* Footer */}
+        <div className="mt-6 text-center">
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            By continuing, you agree to our{" "}
+            <a
+              href="#"
+              className="underline hover:text-gray-700 dark:hover:text-gray-300"
+            >
+              Terms
+            </a>{" "}
+            and{" "}
+            <a
+              href="#"
+              className="underline hover:text-gray-700 dark:hover:text-gray-300"
+            >
+              Privacy Policy
+            </a>
+          </p>
+        </div>
         <div className="mt-6 text-center">
           <p className="text-xs text-gray-500 dark:text-gray-400">
             By continuing, you agree to our{" "}
