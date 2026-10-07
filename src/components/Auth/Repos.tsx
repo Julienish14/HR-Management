@@ -25,6 +25,15 @@ const Repositories = ({ repos }) => {
               ))}
             </select>
           </div>
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+          >
+            <option value="stars">Sort by stars</option>
+            <option value="name">Sort by name</option>
+            <option value="updated">Sort by updated</option>
+          </select>
         </div>
       </div>
     </div>
