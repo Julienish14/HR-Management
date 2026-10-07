@@ -8,6 +8,11 @@ const Repositories = ({ repos }) => {
 
   if (!repos || repos.length === 0) return null;
 
+  const languages = [
+    "all",
+    ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
+  ];
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
