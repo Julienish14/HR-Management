@@ -43,6 +43,18 @@ const Repositories = ({ repos }) => {
           </select>
         </div>
       </div>
+
+      <div className="space-y-4">
+        {sortedRepos.length > 0 ? (
+          sortedRepos.map((repo) => (
+            <RepositoryItem key={repo.id} repo={repo} />
+          ))
+        ) : (
+          <p className="text-gray-500 dark:text-gray-400">
+            No repositories found with the selected language.
+          </p>
+        )}
+      </div>
     </div>
   );
 };
