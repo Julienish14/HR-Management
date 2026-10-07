@@ -10,6 +10,17 @@ const Repositories = ({ repos }) => {
         <div className="flex flex-wrap gap-3">
           <div className="flex items-center">
             <FiFilter className="mr-2 text-gray-500" />
+            <select
+              value={languageFilter}
+              onChange={(e) => setLanguageFilter(e.target.value)}
+              className="px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              {languages.map((lang) => (
+                <option key={lang} value={lang}>
+                  {lang}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </div>
