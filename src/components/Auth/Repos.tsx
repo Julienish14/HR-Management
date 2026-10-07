@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FiFilter } from "react-icons/fi";
+import RepositoryItem from "./RepositoryItem";
 
 const Repositories = ({ repos }) => {
   const [sortBy, setSortBy] = useState("stars");
