@@ -13,6 +13,19 @@ const Repositories = ({ repos }) => {
     ...new Set(repos.map((repo) => repo.language).filter(Boolean)),
   ];
 
+  const sortedRepos = [...repos]
+    .sort((a, b) => {
+      if (sortBy === "stars") return b.stargazers_count - a.stargazers_count;
+      if (sortBy === "name") return a.name.localeCompare(b.name);
+      if (sortBy === "updated")
+        return new Date(b.updated_at) - new Date(a.updated_at);
+      return 0;
+    })
+    .filter(
+      (repo) => languageFilter === "all" || repo.language === languageFilter,
+    )
+    .slice(0, 10);
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
