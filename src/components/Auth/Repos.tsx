@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 const Repositories = ({ repos }) => {
+  const [sortBy, setSortBy] = useState("stars");
+  const [languageFilter, setLanguageFilter] = useState("all");
+
   if (!repos || repos.length === 0) return null;
 
   return (
